@@ -85,7 +85,7 @@ const createSlider = () => {
 
   const durationInput = document.getElementById('duration').value;
   const duration =  durationInput >= 1000 ? durationInput : 1000;
-  
+
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
@@ -149,6 +149,7 @@ const search = ()=> {
 
 sliderBtn.addEventListener('click', function () {
   createSlider()
+  document.getElementById('duration').value = ''
 })
 // Show and hide loader
 const showLoader = condition => {
